@@ -2,7 +2,4 @@
 	import { walletStore } from '$lib/store/wallet.store';
 </script>
 
-<main class="main">
-	This is page
-	{$walletStore.address}
-</main>
+<div class="flex justify-center hero">This is crop {$walletStore.address}</div>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="dfa46f16-a3d7-470c-a161-b25b80267698" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/Components/ConnectWallet.svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/Components/ThemeSwitcher.svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/Components/atoms/BaseModal.svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/Components/atoms/Menu.svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/Components/atoms/Popover.svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/Components/atoms/Switch.svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/Components/atoms/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/Components/navigations/NavMenu.svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/Components/navigations/NavMenuItem.svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/Components/navigations/Navbar.svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/Components/navigations/Sidebar.svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/Components/navigations/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/Components/networks/Network.svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/Components/networks/NetworkBrowser.svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/Components/networks/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/configs/chains.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/pages/Crops/index.svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/providers/OnboardProvider.svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/providers/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/utils/chains.utils.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/utils/walletUtils.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/crops/+page.svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/portfolio/+page.svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/settings/+page.svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/swap/+page.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/boring-svelte.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/boring-svelte.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/test_package.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/Components/BaseModal.svelte" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/Components/Navbar.svelte" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/Components/WalletDetailModal.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/Components/WalletDetailModal.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/web3-onboard.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/+layout.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/+layout.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/+page.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/+page.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/modals.store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/store/modals.store.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/wallet.store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/store/wallet.store.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2OECH0XMmlm1eOyYWoVNAqp5TB2" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "E:/Code/boring-svelte",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "yarn",
+    "prettierjs.PrettierConfiguration.Package": "E:\\Code\\boring-svelte\\node_modules\\prettier",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "ts.external.directory.path": "E:\\Code\\boring-svelte\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Code\boring-svelte\src\lib\components\atoms" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="dfa46f16-a3d7-470c-a161-b25b80267698" name="Changes" comment="" />
+      <created>1681116263415</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1681116263415</updated>
+      <workItem from="1681116264416" duration="4214000" />
+      <workItem from="1681292382734" duration="11674000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+</project>

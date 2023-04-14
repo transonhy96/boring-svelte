@@ -14,12 +14,15 @@
 		"format": "prettier --plugin-search-dir . --write ."
 	},
 	"devDependencies": {
+		"@iconify/svelte": "^3.1.1",
 		"@playwright/test": "^1.28.1",
+		"@rgossiaux/svelte-headlessui": "^1.0.2",
 		"@sveltejs/adapter-auto": "^2.0.0",
 		"@sveltejs/kit": "^1.5.0",
 		"@typescript-eslint/eslint-plugin": "^5.45.0",
 		"@typescript-eslint/parser": "^5.45.0",
 		"autoprefixer": "^10.4.14",
+		"clsx": "^1.2.1",
 		"eslint": "^8.28.0",
 		"eslint-config-prettier": "^8.5.0",
 		"eslint-plugin-svelte3": "^4.0.0",
@@ -38,7 +41,6 @@
 	"dependencies": {
 		"@web3-onboard/core": "^2.16.0",
 		"@web3-onboard/injected-wallets": "^2.8.3",
-		"@web3-onboard/walletconnect": "^2.3.3",
-		"daisyui": "^2.51.5"
+		"@web3-onboard/walletconnect": "^2.3.3"
 	}
 }

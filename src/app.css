@@ -1,3 +1,25 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+@layer components {
+    .text-default {
+        @apply text-slate-900 dark:text-white;
+    }
+    .bg-default{
+        @apply dark:bg-neutral-900 bg-gray-100;
+    }
+    .bg-subdued{
+        @apply dark:bg-[#1e1f25] bg-gray-100;
+    }
+}
+
+@layer utilities{
+    .boring-transition{
+        @apply transition-all ease-in-out duration-700;
+    }
+}
