@@ -1,55 +1,61 @@
 <script lang="ts">
-	import { onMount } from 'svelte'
+	import { onMount } from 'svelte';
 	// indicate if we're in dark mode or not
-	let dark: boolean
+	let dark: boolean;
 	// hide the control until we've decided what the intial mode is
-	let hidden = true
+	let hidden = true;
 	onMount(() => {
 		// use the existence of the dark class on the html element for the initial value
-		dark = document.documentElement.classList.contains('dark')
+		dark = document.documentElement.classList.contains('dark');
 		// show UI controls
-		hidden = false
+		hidden = false;
 		// listen for changes so we auto-adjust based on system settings
-		const matcher = window.matchMedia('(prefers-color-scheme: dark)')
-		matcher.addEventListener('change', handleChange)
-		return () => matcher.removeEventListener('change', handleChange)
-	})
+		const matcher = window.matchMedia('(prefers-color-scheme: dark)');
+		matcher.addEventListener('change', handleChange);
+		return () => matcher.removeEventListener('change', handleChange);
+	});
 	function handleChange({ matches: dark }: MediaQueryListEvent) {
 		// only set if we haven't overridden the theme
 		if (!localStorage.theme) {
-			setMode(dark)
+			setMode(dark);
 		}
 	}
 	function toggle() {
-		setMode(!dark)
+		setMode(!dark);
 	}
 	function setMode(value: boolean) {
-		dark = value
+		dark = value;
 		// update page styling
 		if (dark) {
-			document.documentElement.classList.add('dark')
+			document.documentElement.classList.add('dark');
 		} else {
-			document.documentElement.classList.remove('dark')
+			document.documentElement.classList.remove('dark');
 		}
 		// store the theme as a local override
-		localStorage.theme = dark ? 'dark' : 'light'
+		localStorage.theme = dark ? 'dark' : 'light';
 		// if the toggled-to theme matches the system defined theme, clear the local override
 		// this effectively provides a way to override or revert to "automatic" setting mode
 		if (window.matchMedia(`(prefers-color-scheme: ${localStorage.theme})`).matches) {
-			localStorage.removeItem('theme')
+			localStorage.removeItem('theme');
 		}
 	}
 </script>
+
 <svelte:head>
 	<!-- set dark mode class based on user preference / device settings (in head to avoid FOUC) -->
+	<!-- set dark mode class based on user preference / device settings (in head to avoid FOUC) -->
 	<script>
-		if (localStorage.theme === 'dark' || (!localStorage.theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-			document.documentElement.classList.add('dark')
+		if (
+			localStorage.theme === 'dark' ||
+			(!localStorage.theme && window.matchMedia('(prefers-color-scheme: dark)').matches)
+		) {
+			document.documentElement.classList.add('dark');
 		} else {
-			document.documentElement.classList.remove('dark')
+			document.documentElement.classList.remove('dark');
 		}
 	</script>
 </svelte:head>
+<!-- svelte-ignore a11y-role-supports-aria-props -->
 <button
 	class="{dark
 		? 'bg-gray-600 focus:ring-gray-400 ring-offset-gray-700'

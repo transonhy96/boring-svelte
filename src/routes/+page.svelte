@@ -1,8 +1,9 @@
 <script lang="ts">
-	import { walletStore } from '$lib/store/wallet.store';
+	import { useOnboard } from '$lib/providers/Onboard';
+	const { store } = useOnboard();
 </script>
 
 <main class="main">
 	This is page
-	{$walletStore.address}
+	{$store?.account?.address}
 </main>

@@ -1,7 +1,8 @@
 <script lang="ts">
 	import Icon from '@iconify/svelte';
-	import Network from '$lib/components/networks/Network.svelte';
-	import Popover from '../atoms/Popover.svelte';
+	import Popover from '../primitives/Popover.svelte';
+	import { Network } from '.';
+	import Button from '../primitives/Button.svelte';
 	const items = [
 		{
 			name: 'Ethereum'
@@ -16,10 +17,7 @@
 </script>
 
 <Popover>
-	<button
-		slot="trigger"
-		class="border flex items-center justify-center gap-2 p-1 overflow-hidden rounded-full shadow-md cursor-pointer"
-	>
+	<Button slot="trigger" handler={() => {}}>
 		<svg
 			class="rounded-full"
 			aria-hidden="true"
@@ -45,21 +43,20 @@
 				fill="#ffffff"
 			/></svg
 		>
-		<Icon icon="mdi:chevron-down" class=" text-default" />
-	</button>
+		<Icon icon="mdi:chevron-down" />
+	</Button>
 	<!-- svelte-ignore a11y-click-events-have-key-events -->
-	<div
-		slot="content"
-		class="p-2"
-		let:close
-		on:click={() => {
-			close(null);
-		}}
-	>
+	<div slot="content" class="p-2" let:close>
 		<div class="flex my-3 ml-2 text-sm text-default">Switch networks</div>
 		<div class="flex flex-col gap-1">
 			{#each items as item}
-				<Network connected={item.name == 'Ethereum'} network={item.name} />
+				<Network
+					handler={() => {
+						close(null);
+					}}
+					connected={item.name == 'Ethereum'}
+					network={item.name}
+				/>
 			{/each}
 		</div>
 	</div>

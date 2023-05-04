@@ -1,13 +1,11 @@
 <script lang="ts">
-	import BaseModal from './atoms/BaseModal.svelte';
+	import BaseModal from './BaseModal.svelte';
 	import { ModalKey, modalStore, toggleModal } from '$lib/store/modals.store';
-	import { resetWallet, walletStore } from '$lib/store/wallet.store';
-	import { truncateWalletAddress } from '$lib/utils/walletUtils';
-	import { useOnboard } from '$lib/providers';
-	const { disconnectWallet } = useOnboard();
+	import { truncateWalletAddress } from '$lib/utils/wallet.utils';
+	import { useOnboard } from '$lib/providers/Onboard';
+	const { disconnect, store } = useOnboard();
 	const handleDisconnect = () => {
-		disconnectWallet({ label: $walletStore.name || '' });
-		resetWallet();
+		disconnect();
 		toggleModal(ModalKey.WalletDetail);
 	};
 </script>
@@ -26,7 +24,7 @@
 			</div>
 		</div>
 		<div>
-			{truncateWalletAddress($walletStore.address || '')}
+			{truncateWalletAddress(($store.account && $store.account.address) || '')}
 		</div>
 		<div class="divider" />
 		<div class="flex items-center gap-2">
@@ -45,12 +43,10 @@
 		<div class="grid w-3/4 grid-cols-3 gap-4 mx-auto">
 			<button
 				class="inline-flex justify-center px-4 py-2 text-sm font-medium text-blue-900 bg-blue-100 border border-transparent rounded-md hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-500"
-				on:click={() => {}}
 				>Change network
 			</button>
 			<button
 				class="flex flex-col items-center justify-center px-4 py-2 text-sm font-medium text-blue-900 bg-blue-100 border border-transparent rounded-md hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-500"
-				on:click={() => {}}
 			>
 				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
 					><g fill="none" stroke="currentColor" stroke-width="1.5"

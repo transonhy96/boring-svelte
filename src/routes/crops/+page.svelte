@@ -1,5 +1,6 @@
 <script lang="ts">
-	import { walletStore } from '$lib/store/wallet.store';
+	import { useOnboard } from '$lib/providers/Onboard';
+	const { store } = useOnboard();
 </script>
 
-<div class="flex justify-center hero">This is crop {$walletStore.address}</div>
+<div class="flex justify-center hero">This is crop {$store?.account?.address}</div>

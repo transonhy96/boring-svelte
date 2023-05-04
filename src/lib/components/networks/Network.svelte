@@ -3,9 +3,12 @@
 
 	export let network: string;
 	export let connected: boolean;
+	export let handler:()=>void;
 </script>
 
+<!-- svelte-ignore a11y-click-events-have-key-events -->
 <div
+	on:click={()=>{handler()}}
 	class={clsx(
 		connected && 'bg-violet-950 pointer-events-none',
 		'flex items-center w-56 gap-2 p-2 overflow-hidden rounded-md cursor-pointer hover:bg-green-800'

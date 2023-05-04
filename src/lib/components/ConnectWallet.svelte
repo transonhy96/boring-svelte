@@ -1,38 +1,38 @@
 <script lang="ts">
-	import { useOnboard } from '$lib/providers';
-	import { resetWallet, walletStore } from '$lib/store/wallet.store';
-	import { truncateWalletAddress } from '$lib/utils/walletUtils';
-	import Popover from './atoms/Popover.svelte';
-	import clsx from 'clsx';
+	import { useOnboard } from '$lib/providers/Onboard';
+	import { truncateWalletAddress } from '$lib/utils/wallet.utils';
+	import Popover from './primitives/Popover.svelte';
+	import Button from './primitives/Button.svelte';
 
-	const { connectWallet, disconnectWallet } = useOnboard();
+	const { connect, disconnect, store } = useOnboard();
 
-	let isConnecting = false;
 	const handleConnect = async () => {
-		if (!$walletStore.address) {
-			isConnecting = true;
-			await connectWallet();
-			isConnecting = false;
+		if (!$store?.account) {
+			connect();
 		} else {
 			return;
 		}
 	};
 	const handleDisconnect = async () => {
-		console.log('disconnect');
-		await disconnectWallet({ label: $walletStore.name });
-		resetWallet();
+		disconnect();
 	};
+	$: {
+		console.log($store);
+	}
 </script>
 
-<Popover>
-	<button
-		class={clsx('flex text-default gap-2 rounded-full p-2 border ', isConnecting && 'loading btn-square')}
-		on:click={() => handleConnect()}
-		slot="trigger"
-	>
-		{#if $walletStore.address && !isConnecting}
+{#if $store?.isConnecting}
+	<Button isLoading={$store?.isConnecting}>
+		<div>Connecting</div>
+	</Button>
+{:else if !$store?.account}
+	<Button handler={handleConnect}>
+		<div>Connect</div>
+	</Button>
+{:else}
+	<Popover>
+		<Button handler={handleConnect} slot="trigger">
 			<svg
-
 				width="25px"
 				height="25px"
 				viewBox="0 0 24 24"
@@ -44,15 +44,9 @@
 					fill="currentColor"
 				/>
 			</svg>
-			{$walletStore.ens ? $walletStore.ens : truncateWalletAddress($walletStore.address)}
-		{:else if !isConnecting}
-			<div>Connect wallet</div>
-		{:else }
-			<div>Connecting</div>
-		{/if}
-	</button>
-	<div slot="content" let:close>
-		{#if $walletStore.address}
+			{$store?.account.ens ? $store?.account.ens : truncateWalletAddress($store?.account.address)}
+		</Button>
+		<div slot="content" let:close>
 			<div class="text-primary-content">
 				<div class="card-body">
 					<div class="flex items-center justify-between">
@@ -93,16 +87,18 @@
 							>
 						</button>
 					</div>
-					<div class="gap-1 p-4 mt-2 w-60 rounded-xl bg-opacity-50 text-default">
+					<div class="gap-1 p-4 mt-2 bg-opacity-50 w-60 rounded-xl text-default">
 						<h3>
-							{$walletStore.name}
+							{$store?.wallet && $store?.wallet.label}
 						</h3>
 						<div class="flex items-center justify-between gap-1 mt-2">
 							<div class="flex items-center gap-2">
 								<svg width="24" height="24">
-									{@html $walletStore.logo}
+									{@html $store?.wallet && $store?.wallet.icon}
 								</svg>
-								{$walletStore.ens ? $walletStore.ens : truncateWalletAddress($walletStore.address)}
+								{$store?.account.ens
+									? $store?.account.ens
+									: truncateWalletAddress($store?.account.address)}
 							</div>
 							<div class="cursor-pointer text-primary">
 								<svg
@@ -147,6 +143,6 @@
 					</div>
 				</div>
 			</div>
-		{/if}
-	</div>
-</Popover>
+		</div>
+	</Popover>
+{/if}

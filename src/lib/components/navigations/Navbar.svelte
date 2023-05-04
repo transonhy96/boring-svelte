@@ -3,10 +3,10 @@
 	import NetworkBrowser from '../networks/NetworkBrowser.svelte';
 </script>
 
-<div class="flex justify-between boring-transition w-full p-2">
-	<div></div>
-	<div></div>
-	<div class="flex justify-center items-center gap-4">
+<div class="flex justify-between w-full p-2 boring-transition">
+	<div />
+	<div />
+	<div class="flex items-center justify-center gap-4">
 		<NetworkBrowser />
 		<ConnectWallet />
 	</div>

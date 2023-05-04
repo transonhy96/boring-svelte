@@ -7,9 +7,9 @@
 	} from '@rgossiaux/svelte-headlessui';
 	import { slide } from 'svelte/transition';
 	export let isOpen: boolean;
-	export let onClose: Function;
-	export let title: string = 'Modal';
-	export let descriptions: string = 'Description';
+	export let onClose: () => void;
+	export let title = 'Modal';
+	export let descriptions = 'Description';
 </script>
 
 {#if isOpen}
